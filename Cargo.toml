@@ -1,0 +1,10 @@
+[package]
+name = "libspinnaker-sys"
+description = "bindings to the Spinnaker library"
+version = "0.1.0"
+authors = ["Filip Szczerek <ga.software@yahoo.com>"]
+build = "build.rs"
+license = "MIT"
+homepage = "https://github.com/GreatAttractor/libspinnaker-sys"
+repository = "https://github.com/GreatAttractor/libspinnaker-sys"
+links = "Spinnaker_C"
