@@ -9,10 +9,10 @@ fn main() {
         Err(_) => {
             match target.as_ref() {
                 "x86_64-pc-windows-msvc"
-				| "x86_64-pc-windows-gnu"
-				| "i686-pc-windows-msvc"
-				| "i686-pc-windows-gnu" => panic!("Missing env. variable SPINNAKER_LIBDIR. Set it to Spinnaker_C DLL location."),
-				
+                | "x86_64-pc-windows-gnu"
+                | "i686-pc-windows-msvc"
+                | "i686-pc-windows-gnu" => panic!("Missing env. variable SPINNAKER_LIBDIR. Set it to Spinnaker_C DLL location."),
+
                 _ => "/opt/spinnaker/lib".to_string(),
             }
         }
@@ -22,10 +22,10 @@ fn main() {
 
     let libname = match target.as_ref() {
         "x86_64-pc-windows-msvc"
-		| "i686-pc-windows-msvc"
-		| "x86_64-pc-windows-gnu"
-		| "i686-pc-windows-gnu" => find_windows_library_in_dir(&libdir),
-		
+        | "i686-pc-windows-msvc"
+        | "x86_64-pc-windows-gnu"
+        | "i686-pc-windows-gnu" => find_windows_library_in_dir(&libdir),
+
         _ => "Spinnaker_C".to_string(),
     };
 
